@@ -14,7 +14,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background-color: rgb(236, 236, 236);
+  background-color: rgba(0, 0, 0, 0.05);
   font-family: parkinsans;
   font-size: 20px;
   font-weight: 600;
@@ -74,17 +74,19 @@ header {
     linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%),
     linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%);
   background-size: 120px 60px;
-  font-family: montserrat;
+  font-family: kanit;
   font-weight: 600;
   display: grid;
   place-items: center;
   position: relative;
+  height: 100vh;
 }
 
 .overlay h1 {
   padding-top: 200px;
   text-align: center;
-  font-size: 60px;
+  font-size: 70px;
+  letter-spacing: 2px;
 }
 
 .overlay p {
@@ -98,7 +100,7 @@ header {
 }
 
 .overlay button {
-  padding: 22px 80px;
+  padding: 20px 80px;
   background-color: var(--green);
   outline: none;
   border: none;
@@ -162,106 +164,124 @@ header {
   }
 }
 
-.portrait {
-  border: 3px solid rgb(255, 255, 255);
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  flex-basis: 40%;
+.about {
+  justify-items: center;
+  align-items: start;
+  padding: 100px 200px;
+  gap: 50px;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-.descCont {
-  flex-basis: 60%;
-  color: white;
-  font-family: parkinsans;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background-color: white;
-  padding: 3%;
-  border: 3px solid black;
-  border-radius: 12px;
-  box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.322);
-}
-
-.descCont h1 {
-  font-size: 46.73px;
-  flex-basis: 30%;
-  font-weight: bold;
-  color: black;
-  letter-spacing: 1px;
-}
-
-.descCont p {
-  flex-basis: 70%;
-  text-align: justify;
-  color: black;
-}
-
-#content.about {
-  background-color: rgb(255, 255, 255);
-  display: grid;
-  grid-template-rows: 1fr 3fr;
-  grid-template-columns: 1fr 1fr;
-  padding: 2%;
-  font-family: parkinsans;
-  gap: 3%;
-}
-
-.labelDiv {
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
-  height: 100%;
-  display: grid;
-  border-radius: 10px;
-  padding: 1%;
-  background-color: rgb(230, 223, 219);
-  font-size: 22px;
-}
-
-.labelDiv p {
-  text-align: center;
-  place-self: center;
-  padding: 0 20% 0 20%;
-  color: rgb(0, 0, 0);
-  letter-spacing: 1px;
-  line-height: 26px;
-}
-
-.meDiv {
+.aboutDiv {
+  grid-row: 2 / 3;
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr;
+  font-family: kanit;
+  flex-basis: 50%;
 }
 
-.meDiv p {
-}
-
-.skillDiv {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr;
-}
-
-.skillDiv h1,
-.meDiv h1 {
-  grid-row: 1 / 2;
-  align-self: center;
+.aboutDiv h2,
+.skillsDiv h2 {
   font-size: 26px;
+  font-weight: 500;
+  font-family: kanit;
+  letter-spacing: 1.5px;
+}
+
+.aboutDiv p {
+  padding: 40px 0;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 2;
+}
+
+.aboutDiv button {
+  padding: 16px 40px;
+  background-color: var(--green);
+  outline: none;
+  border: none;
   border-radius: 10px;
-  border-top: 10px solid rgb(29, 29, 29);
-  background-color: rgb(230, 223, 219);
-  padding-left: 3%;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.445);
+  margin-bottom: 200px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
-.skillDiv div,
-.meDiv p {
+.aboutDiv button:hover {
+  color: white;
+  background-color: black;
+}
+
+.aboutMainContainer {
+  display: flex;
+  gap: 100px;
+  padding-top: 100px;
+}
+
+.skillsDiv {
   grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  flex-basis: 50%;
 }
 
-.skillDiv div {
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  gap: 20px;
+}
+
+.skillsContainer img {
+  width: 150px;
+}
+
+.iconContainer {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: kanit;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.iconContainer h3 {
+  padding-top: 10px;
+}
+.aboutLabelDiv {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  display: grid;
+  place-items: center;
+  gap: 40px;
+}
+
+.aboutLabelDiv h1 {
+  font-family: montserrat;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 60px;
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  background-color: var(--green);
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.aboutLabelDiv p {
+  font-family: kanit;
+  font-size: 24px;
+  width: 50%;
+  text-align: center;
+  font-weight: 300;
 }
