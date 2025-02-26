@@ -3,7 +3,7 @@ import { populateHome } from "./home.js";
 import { populateAbout } from "./about.js";
 
 // populateHome();
-populateAbout();
+
 
 
 const homeButton = document.getElementById("home");
