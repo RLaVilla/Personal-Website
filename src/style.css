@@ -79,20 +79,25 @@ header {
   background-size: 120px 60px;
   font-family: kanit;
   font-weight: 600;
-  display: grid;
-  place-items: center;
   position: relative;
   height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
-.overlay h1 {
-  padding-top: 260px;
+.overlayContainer {
+  margin: auto;
+  display: grid;
+  place-items: center;
+}
+
+.overlayContainer h1 {
   text-align: center;
   font-size: 70px;
   letter-spacing: 2px;
 }
 
-.overlay p {
+.overlayContainer p {
   font-size: 20px;
   width: 50%;
   font-weight: 300;
@@ -102,7 +107,7 @@ header {
   padding: 50px;
 }
 
-.overlay button {
+.overlayContainer button {
   padding: 20px 80px;
   background-color: var(--green);
   outline: none;
@@ -112,30 +117,27 @@ header {
   font-size: 18px;
   font-weight: bold;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.445);
-  margin-bottom: 200px;
   color: white;
   cursor: pointer;
   transition: color 0.5s ease;
   transition: background-color 0.5s ease;
 }
 
-.overlay button:hover {
+.overlayContainer button:hover {
   color: white;
   background-color: black;
 }
 
 .linkContainer {
-  background-color: rgb(255, 255, 255);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.61);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: absolute;
-  padding: 5px;
   left: 0;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
+  bottom: 50%;
+  top: 50%;
 }
 
 .linkContainer img {
@@ -217,9 +219,9 @@ header {
 .imgCardTwo {
   background-image: url("./images/striper.jpg");
   background-size: cover;
-  top: 0;
-  left: 0;
-  transform: rotate(0deg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
   transition:
     transform 0.5s ease,
@@ -229,8 +231,9 @@ header {
 .imgCard {
   background-image: url("./images/forest.jpg");
   background-size: cover;
-  top: 20px;
-  left: -150px;
+  top: 10%;
+  left: -30%;
+  transform: translate(-50%, -50%);
   transform: rotate(-10deg);
   z-index: 1;
   transition:
@@ -241,8 +244,9 @@ header {
 .imgCardThree {
   background-image: url("./images/mark.PNG");
   background-size: cover;
-  top: 20px;
-  left: 150px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transform: rotate(10deg);
   z-index: 3;
   transition:
@@ -256,7 +260,7 @@ header {
 }
 
 .imgCardTwo:hover {
-  transform: rotate(0deg) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
   z-index: 4;
 }
 
@@ -314,6 +318,7 @@ span {
   flex-wrap: wrap;
   padding: 40px 0 0 0;
   gap: 20px;
+  justify-content: center;
 }
 
 .skillsContainer img {
@@ -540,8 +545,12 @@ img.mity {
     height: 170px;
   }
 
-  .about {
+  .about,
+  section.projects {
     padding: 50px;
+  }
+  .project {
+    flex-direction: column;
   }
 }
 
@@ -555,12 +564,21 @@ img.mity {
     font-size: 16px;
   }
 
-  .overlay h1 {
-    padding-top: 180px;
-  }
-
   .overlay p {
     width: 80%;
+  }
+
+  .overlay h1 {
+    font-size: 60px;
+  }
+
+  .iconContainer h3 {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  .responsive {
+    padding-bottom: 5px;
+    padding-top: -5px;
   }
 }
 
@@ -587,15 +605,16 @@ img.mity {
   }
 
   header {
-    font-size: 16px;
+    font-size: 17px;
+    padding: 20px;
   }
 
   .navItem {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   #nav {
-    gap: 30px;
+    gap: 20px;
   }
 
   .homeCont img {
@@ -603,7 +622,6 @@ img.mity {
   }
 
   .overlay h1 {
-    padding-top: 180px;
     font-size: 56px;
   }
 
@@ -614,22 +632,119 @@ img.mity {
 
 @media (max-width: 750px) {
   #nav {
-    gap: 20px;
+    gap: 14px;
   }
 
   .homeCont {
     gap: 20px;
   }
 
-  header {
-    padding: 20px 20px;
+  .overlay h1 {
+    font-size: 44px;
   }
 
-  .overlay h1 {
-    padding-top: 180px;
-    font-size: 44px;
+  header {
+    font-size: 15px;
+    height: 8vh;
+  }
+
+  .navItem {
+    font-size: 13px;
+  }
+
+  .imgCard,
+  .imgCardTwo,
+  .imgCardThree {
+    min-width: 200px;
+    border-radius: 12px;
+    min-height: 200px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+  }
+
+  .imgCard {
+    top: 20%;
+    left: -20%;
+  }
+
+  .imgCardTwo {
+    top: 50%;
+    left: 50%;
+  }
+
+  .imgCardThree {
+    top: 20%;
+    left: 50%;
+  }
+
+  .aboutLabelDiv,
+  .projectLabelDiv,
+  .contactLabelDiv {
+    gap: 20px;
+  }
+
+  .projectLabelDiv {
+    padding-bottom: 0;
+  }
+
+  .cardContainer {
+    margin-top: -40px;
+  }
+
+  .aboutMainContainer {
+    padding-top: 0;
   }
 }
 
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
+
 @media (max-width: 600px) {
+  #nav {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    width: 50%;
+    top: 8vh;
+    right: 0;
+    gap: 0;
+    border-bottom-left-radius: 10px;
+    box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.199);
+    opacity: 0;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .itemCont {
+    padding: 20px;
+    border-top: 1px solid rgb(0, 0, 0);
+  }
+
+  .home {
+    border-top: none;
+  }
+
+  .navItem {
+    font-size: 14px;
+  }
+
+  .menu-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  #nav.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }

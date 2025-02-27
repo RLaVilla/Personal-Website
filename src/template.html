@@ -29,15 +29,16 @@
       <img src="./images/github.svg" alt="Robert LaVilla Portrait" />
       <h1>ROBERT LAVILLA</h1>
     </div>
+    <button id="menuToggle" class="menu-btn">☰</button>
     <nav id="nav">
+      <div class="itemCont home">
+        <div class="navItem" id="home">HOME</div>
+      </div>
       <div class="itemCont">
         <div class="navItem" id="about">ABOUT</div>
       </div>
       <div class="itemCont">
         <div class="navItem" id="projects">PROJECTS</div>
-      </div>
-      <div class="itemCont">
-        <div class="navItem" id="resume">RESUME</div>
       </div>
       <div class="itemCont">
         <div class="navItem" id="contact">CONTACT</div>
@@ -46,19 +47,25 @@
   </header>
   <body>
     <div class="overlay">
-      <h1>Hey, I'm Robert LaVilla</h1>
-      <p>
-        A self-educated Web Developer with a passion for building complete web
-        applications and a determination to contribute to the ever-evolving
-        landscape of web development.
-      </p>
-      <button>PROJECTS</button>
-      <div class="linkContainer">
-        <div class="buttonCont">
-          <img src="./images/github.svg" alt="GitHub Icon" id="github" />
-        </div>
-        <div class="buttonCont">
-          <img src="./images/linkedin.svg" alt="LinkedIn Icon" id="linkedin" />
+      <div class="overlayContainer">
+        <h1>Hey, I'm Robert LaVilla</h1>
+        <p>
+          A self-educated Web Developer with a passion for building complete web
+          applications and a determination to contribute to the ever-evolving
+          landscape of web development.
+        </p>
+        <button>PROJECTS</button>
+        <div class="linkContainer">
+          <div class="buttonCont">
+            <img src="./images/github.svg" alt="GitHub Icon" id="github" />
+          </div>
+          <div class="buttonCont">
+            <img
+              src="./images/linkedin.svg"
+              alt="LinkedIn Icon"
+              id="linkedin"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -121,7 +128,7 @@
               <img src="./images/github.svg" alt="GitHub Icon" />
               <h3>GitHub</h3>
             </div>
-            <div class="iconContainer">
+            <div class="iconContainer responsive">
               <img src="./images/responsive.svg" alt="Responsive Design Icon" />
               <h3>Responsive Design</h3>
             </div>
@@ -179,10 +186,10 @@
           <div class="projectInfo">
             <h2>Battleship Game</h2>
             <p>
-              The Battleship Game was a project I made during The Odin Project
-              curriculum. I enjoyed the challenge of programming the logic to
-              make the game functional and tying it all together with a simple
-              user interface.
+              The Battleship Game was a project I created during The Odin
+              Project curriculum. I enjoyed the challenge of programming the
+              logic to make the game functional and tying it all together with a
+              simple user interface.
             </p>
             <div class="buttonContainer">
               <img
