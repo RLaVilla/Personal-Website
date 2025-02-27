@@ -25,23 +25,23 @@
     <title>Robert LaVilla</title>
   </head>
   <header>
-    <div class="homeCont">
+    <div id="homeContainer" class="homeCont">
       <img src="./images/github.svg" alt="Robert LaVilla Portrait" />
       <h1>ROBERT LAVILLA</h1>
     </div>
     <button id="menuToggle" class="menu-btn">☰</button>
     <nav id="nav">
       <div class="itemCont home">
-        <div class="navItem" id="home">HOME</div>
+        <div class="navItem" id="homeButton">HOME</div>
       </div>
       <div class="itemCont">
-        <div class="navItem" id="about">ABOUT</div>
+        <div class="navItem" id="aboutButton">ABOUT</div>
       </div>
       <div class="itemCont">
-        <div class="navItem" id="projects">PROJECTS</div>
+        <div class="navItem" id="projectsButton">PROJECTS</div>
       </div>
       <div class="itemCont">
-        <div class="navItem" id="contact">CONTACT</div>
+        <div class="navItem" id="contactButton">CONTACT</div>
       </div>
     </nav>
   </header>
@@ -54,22 +54,26 @@
           applications and a determination to contribute to the ever-evolving
           landscape of web development.
         </p>
-        <button>PROJECTS</button>
+        <button id="projectsHomeButton">PROJECTS</button>
         <div class="linkContainer">
           <div class="buttonCont">
-            <img src="./images/github.svg" alt="GitHub Icon" id="github" />
+            <img
+              src="./images/github.svg"
+              alt="GitHub Icon"
+              id="githubHomeButton"
+            />
           </div>
           <div class="buttonCont">
             <img
               src="./images/linkedin.svg"
               alt="LinkedIn Icon"
-              id="linkedin"
+              id="linkedInHomeButton"
             />
           </div>
         </div>
       </div>
     </div>
-    <section class="about">
+    <section id="about" class="about">
       <div class="aboutLabelDiv">
         <h1>ABOUT ME</h1>
         <div class="line"></div>
@@ -89,8 +93,8 @@
             curriculum - a thorough, learn-by-doing course. Throughout the
             course and my own aspirations, I crafted my development knowledge by
             building many projects, utilizing the skills displayed on this page.
-            Please see some of my work in the <span>Projects</span> section.
-            <br /><br />
+            Please see some of my work in the
+            <span id="projectSpan">Projects</span> section. <br /><br />
             When I'm not at my desk, you can find me at the gym, watching a
             Knicks game, or walking the beach shoreline with a fishing rod in my
             hand.
@@ -99,7 +103,7 @@
             continue learning, and grow as a developer. If you have a role that
             aligns with my experience, feel free to <span>reach out!</span>
           </p>
-          <button>CONTACT</button>
+          <button id="aboutContactButton">CONTACT</button>
         </div>
         <div class="skillsDiv">
           <h2>My skills</h2>
@@ -143,7 +147,7 @@
         </div>
       </div>
     </section>
-    <section class="projects">
+    <section id="projects" class="projects">
       <div class="projectLabelDiv">
         <h1>PROJECTS</h1>
         <div class="line"></div>
@@ -169,10 +173,11 @@
             </p>
             <div class="buttonContainer">
               <img
+                id="mityGithubButton"
                 src="./images/github.svg"
                 alt="GitHub Link for Might Mite Tournament Web App"
               />
-              <button class="goButton">GO</button>
+              <button id="mityGoButton" class="goButton">GO</button>
             </div>
           </div>
         </div>
@@ -193,16 +198,17 @@
             </p>
             <div class="buttonContainer">
               <img
+                id="battleshipGithubButton"
                 src="./images/github.svg"
                 alt="GitHub Link for Battleship Game"
               />
-              <button class="goButton">GO</button>
+              <button id="battleshipGoButton" class="goButton">GO</button>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="contactLabelDiv">
         <h1>CONTACT</h1>
         <div class="line two"></div>
@@ -226,8 +232,13 @@
             <p>robert.lavilla21@gmail.com</p>
           </div>
           <div class="contactLinkContainer">
-            <img src="./images/github.svg" alt="Robert LaVilla's Github Link" />
             <img
+              id="githubContactButton"
+              src="./images/github.svg"
+              alt="Robert LaVilla's Github Link"
+            />
+            <img
+              id="linkedInContactButton"
               src="./images/linkedin.svg"
               alt="Robert LaVilla's LinkedIn Link"
             />
