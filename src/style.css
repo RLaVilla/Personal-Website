@@ -1,5 +1,5 @@
 :root {
-  --green: rgb(53, 156, 113);
+  --green: rgb(72, 174, 192);
 }
 
 * {
@@ -14,13 +14,15 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background-color: rgba(0, 0, 0, 0.05);
   font-family: parkinsans;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   height: 10vh;
+  z-index: 10;
+  background-color: #e6e6e6;
 }
 
 #nav {
@@ -80,11 +82,11 @@ header {
   display: grid;
   place-items: center;
   position: relative;
-  height: 90vh;
+  height: 100vh;
 }
 
 .overlay h1 {
-  padding-top: 200px;
+  padding-top: 260px;
   text-align: center;
   font-size: 70px;
   letter-spacing: 2px;
@@ -152,7 +154,12 @@ header {
 }
 
 .linkContainer div:hover {
-  background-color: rgba(53, 156, 113, 0.329);
+  background-color: rgba(72, 174, 192, 0.5);
+}
+
+.buttonCont {
+  display: grid;
+  place-items: center;
 }
 
 @keyframes pulse {
@@ -264,6 +271,10 @@ header {
   height: 300px;
 }
 
+span {
+  font-weight: 600;
+}
+
 .aboutDiv button {
   padding: 16px 40px;
   background-color: var(--green);
@@ -301,12 +312,14 @@ header {
 .skillsContainer {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0;
+  padding: 40px 0 0 0;
   gap: 20px;
 }
 
 .skillsContainer img {
-  width: 150px;
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
 }
 
 .iconContainer {
@@ -318,20 +331,26 @@ header {
   font-family: kanit;
   font-weight: 500;
   letter-spacing: 1px;
+  width: 160px;
+  height: 200px;
+  text-align: center;
 }
 
 .iconContainer h3 {
   padding-top: 10px;
 }
+
 .aboutLabelDiv,
-.projectLabelDiv {
+.projectLabelDiv,
+.contactLabelDiv {
   display: grid;
   place-items: center;
   gap: 40px;
 }
 
 .aboutLabelDiv h1,
-.projectLabelDiv h1 {
+.projectLabelDiv h1,
+.contactLabelDiv h1 {
   font-family: montserrat;
   font-weight: 400;
   letter-spacing: 2px;
@@ -346,13 +365,16 @@ header {
   margin-bottom: 20px;
 }
 
+.two {
+  background-color: #e6e6e6;
+}
+
 .projectLabelDiv {
   padding-bottom: 40px;
 }
 
-.projects {
+section.projects {
   justify-items: center;
-  width: 80%;
   margin: auto;
   padding: 100px 200px;
 }
@@ -366,7 +388,7 @@ header {
   font-size: 20px;
   font-weight: 250;
   line-height: 2;
-  text-align: justify;
+  gap: 50px;
 }
 
 .projectInfo h2 {
@@ -375,14 +397,27 @@ header {
   letter-spacing: 2px;
 }
 
-.projectContainer img {
-  width: 30%;
+.mockupContainer {
+  height: auto;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  flex-basis: 65%;
+}
+
+.mockupContainer img {
+  width: 100%;
+}
+
+img.mity {
+  width: 40%;
   border-radius: 5px;
 }
 
 .project {
   display: flex;
   gap: 50px;
+  flex: 1 1;
 }
 
 .projectInfo {
@@ -390,6 +425,11 @@ header {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  flex-basis: 35%;
+}
+
+.projectInfo p {
+  text-align: justify;
 }
 
 .buttonContainer {
@@ -424,4 +464,172 @@ header {
 
 .goButton:hover {
   background-color: black;
+}
+
+.contact {
+  background-color: rgba(72, 174, 192, 0.8);
+  padding: 50px 100px;
+}
+
+.contactLabelDiv {
+  gap: 20px;
+}
+
+.contactContainer {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: kanit;
+  letter-spacing: 1px;
+  font-weight: 450;
+}
+
+.contactContainer p {
+  font-size: 19px;
+  font-weight: 450;
+}
+
+.contactInfoDiv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contactInfoDiv p {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.contactIcon {
+  width: 28px;
+}
+
+.imgPlaceholder {
+  flex-basis: 50%;
+  border: 2px solid black;
+  width: 100%;
+  height: auto;
+}
+
+.contactLinkContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.contactLinkContainer img {
+  width: 36px;
+  cursor: pointer;
+}
+
+.contactFlexDiv {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+@media (max-width: 1600px) {
+  section.projects {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 1183px) {
+  .iconContainer {
+    width: 136px;
+    height: 170px;
+  }
+
+  .about {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 1093px) {
+  .iconContainer {
+    width: 120px;
+    height: 150px;
+  }
+
+  .aboutDiv p {
+    font-size: 16px;
+  }
+
+  .overlay h1 {
+    padding-top: 180px;
+  }
+
+  .overlay p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .aboutMainContainer {
+    flex-direction: column;
+  }
+
+  .aboutDiv button {
+    margin-bottom: 0;
+  }
+
+  .aboutDiv p {
+    padding: 10px 0 20px 0;
+    font-size: 16px;
+  }
+
+  .aboutMainContainer {
+    gap: 25px;
+  }
+
+  .skillsContainer {
+    padding-top: 20px;
+  }
+
+  header {
+    font-size: 16px;
+  }
+
+  .navItem {
+    font-size: 12px;
+  }
+
+  #nav {
+    gap: 30px;
+  }
+
+  .homeCont img {
+    width: 40px;
+  }
+
+  .overlay h1 {
+    padding-top: 180px;
+    font-size: 56px;
+  }
+
+  .linkContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  #nav {
+    gap: 20px;
+  }
+
+  .homeCont {
+    gap: 20px;
+  }
+
+  header {
+    padding: 20px 20px;
+  }
+
+  .overlay h1 {
+    padding-top: 180px;
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 600px) {
 }
