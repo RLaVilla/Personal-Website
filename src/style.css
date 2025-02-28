@@ -44,10 +44,7 @@ header {
   gap: 30px;
   transition: color 0.5s ease;
   cursor: pointer;
-}
-
-.homeCont:hover {
-  color: var(--green);
+  touch-action: manipulation;
 }
 
 .itemCont {
@@ -65,10 +62,7 @@ header {
   color: black;
   transition: color 0.5s ease;
   font-size: 16px;
-}
-
-.navItem:hover {
-  color: var(--green);
+  touch-action: manipulation;
 }
 
 .overlay {
@@ -122,11 +116,7 @@ header {
   cursor: pointer;
   transition: color 0.5s ease;
   transition: background-color 0.5s ease;
-}
-
-.overlayContainer button:hover {
-  color: white;
-  background-color: black;
+  touch-action: manipulation;
 }
 
 .linkContainer {
@@ -153,6 +143,7 @@ header {
   padding: 10px;
   transition: background-color 0.5s ease;
   background-color: #00000011;
+  touch-action: manipulation;
 }
 
 .homeGithub {
@@ -161,10 +152,6 @@ header {
 
 .homeLinkedIn {
   border-bottom-right-radius: 10px;
-}
-
-.linkContainer div:hover {
-  background-color: rgba(72, 174, 192, 0.5);
 }
 
 .buttonCont {
@@ -222,6 +209,7 @@ header {
   background-position: center;
   position: absolute;
   transition: transform 0.3s ease-in-out;
+  touch-action: manipulation;
 }
 
 .imgCardTwo {
@@ -262,21 +250,6 @@ header {
     z-index 0s;
 }
 
-.imgCard:hover {
-  transform: rotate(-5deg) scale(1.1);
-  z-index: 4;
-}
-
-.imgCardTwo:hover {
-  transform: translate(-50%, -50%) scale(1.1);
-  z-index: 4;
-}
-
-.imgCardThree:hover {
-  transform: rotate(5deg) scale(1.1);
-  z-index: 4;
-}
-
 .cardContainer {
   position: relative;
   width: 300px;
@@ -290,10 +263,7 @@ span {
 #projectSpan {
   cursor: pointer;
   transition: color 0.5s ease;
-}
-
-#projectSpan:hover {
-  color: var(--green);
+  touch-action: manipulation;
 }
 
 .aboutDiv button {
@@ -310,11 +280,7 @@ span {
   cursor: pointer;
   transition: color 0.5s ease;
   transition: background-color 0.5s ease;
-}
-
-.aboutDiv button:hover {
-  color: white;
-  background-color: black;
+  touch-action: manipulation;
 }
 
 .aboutMainContainer {
@@ -477,10 +443,7 @@ img.mity {
   color: white;
   cursor: pointer;
   transition: background-color 0.5s ease;
-}
-
-.goButton:hover {
-  background-color: black;
+  touch-action: manipulation;
 }
 
 .contact {
@@ -524,6 +487,8 @@ img.mity {
   display: flex;
   align-items: center;
   gap: 20px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .contactInfoDiv p {
@@ -791,9 +756,6 @@ img.mity {
 
   .menu-btn {
     display: block;
-    position: absolute;
-    top: 10px;
-    right: 20px;
   }
 
   #nav.active {
@@ -906,6 +868,10 @@ img.mity {
   .overlayContainer button {
     padding: 20px 40px;
   }
+
+  .linkContainer img {
+    width: 32px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -926,4 +892,96 @@ img.mity {
     width: 300px;
     height: 250px;
   }
+}
+
+@media (hover: hover) {
+  .homeCont:hover {
+    color: var(--green);
+  }
+
+  .navItem:hover {
+    color: var(--green);
+  }
+
+  .overlayContainer button:hover {
+    color: white;
+    background-color: black;
+  }
+
+  .linkContainer div:hover {
+    background-color: rgba(72, 174, 192, 0.5);
+  }
+
+  .imgCard:hover {
+    transform: rotate(-5deg) scale(1.1);
+    z-index: 4;
+  }
+
+  .imgCardTwo:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 4;
+  }
+
+  .imgCardThree:hover {
+    transform: rotate(5deg) scale(1.1);
+    z-index: 4;
+  }
+
+  #projectSpan:hover {
+    color: var(--green);
+  }
+
+  .aboutDiv button:hover {
+    color: white;
+    background-color: black;
+  }
+
+  .goButton:hover {
+    background-color: black;
+  }
+}
+
+.homeCont:active {
+  color: var(--green);
+}
+
+.navItem:active {
+  color: var(--green);
+}
+
+.overlayContainer button:active {
+  color: white;
+  background-color: black;
+}
+
+.linkContainer div:active {
+  background-color: rgba(72, 174, 192, 0.5);
+}
+
+.imgCard:active {
+  transform: rotate(-5deg) scale(1.1);
+  z-index: 4;
+}
+
+.imgCardTwo:active {
+  transform: translate(-50%, -50%) scale(1.1);
+  z-index: 4;
+}
+
+.imgCardThree:active {
+  transform: rotate(5deg) scale(1.1);
+  z-index: 4;
+}
+
+#projectSpan:active {
+  color: var(--green);
+}
+
+.aboutDiv button:active {
+  color: white;
+  background-color: black;
+}
+
+.goButton:active {
+  background-color: black;
 }
