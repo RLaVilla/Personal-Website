@@ -387,10 +387,6 @@ span {
   margin-bottom: 20px;
 }
 
-.two {
-  background-color: #e6e6e6;
-}
-
 .projectLabelDiv {
   padding-bottom: 40px;
 }
@@ -489,8 +485,9 @@ img.mity {
 }
 
 .contact {
-  background-color: rgba(72, 174, 192, 0.8);
+  background-color: rgb(0, 0, 0);
   margin: auto;
+  color: #e6e6e6;
 }
 
 .contactCenterDiv {
@@ -513,6 +510,7 @@ img.mity {
   letter-spacing: 1px;
   font-weight: 450;
   justify-content: center;
+  color: #e6e6e6;
 }
 
 .contactHeading {
@@ -819,6 +817,12 @@ img.mity {
   .contactFlexDiv {
     justify-content: center;
     gap: 20px;
+  }
+
+  .aboutLabelDiv h1,
+  .projectLabelDiv h1,
+  .contactLabelDiv h1 {
+    font-size: 50px;
   }
 }
 
