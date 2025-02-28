@@ -15,6 +15,10 @@ function scrollToSection(buttonId, targetSectionId, headerSelector = "header") {
       top: offsetPosition,
       behavior: "smooth",
     });
+    const nav = document.getElementById("nav");
+    if (nav.classList.contains("active")) {
+      nav.classList.toggle("active");
+    }
   });
 }
 
@@ -25,6 +29,10 @@ homeContainerButton.addEventListener("click", () => {
     left: 0,
     behavior: "smooth",
   });
+  const nav = document.getElementById("nav");
+  if (nav.classList.contains("active")) {
+    nav.classList.toggle("active");
+  }
 });
 
 const homeButton = document.getElementById("homeButton");
@@ -34,6 +42,10 @@ homeButton.addEventListener("click", () => {
     left: 0,
     behavior: "smooth",
   });
+  const nav = document.getElementById("nav");
+  if (nav.classList.contains("active")) {
+    nav.classList.toggle("active");
+  }
 });
 
 const aboutButton = document.getElementById("aboutButton");
@@ -106,3 +118,19 @@ const projectsHomeButton = document.getElementById("projectsHomeButton");
 projectsHomeButton.addEventListener("click", () => {
   scrollToSection("projectsHomeButton", "projects");
 });
+
+function toggleImage(imgId) {
+  const img = document.getElementById(imgId);
+  if (window.innerWidth < 500) {
+    img.style.display = "none";
+  } else {
+    img.style.display = "block";
+  }
+}
+
+toggleImage("removeImg");
+toggleImage("contactImg");
+
+window.addEventListener("resize", () => toggleImage("removeImg"));
+
+window.addEventListener("resize", () => toggleImage("contactImg"));

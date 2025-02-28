@@ -26,7 +26,7 @@
   </head>
   <header>
     <div id="homeContainer" class="homeCont">
-      <img src="./images/github.svg" alt="Robert LaVilla Portrait" />
+      <img src="./images/selfie.jpg" alt="Robert LaVilla Portrait" />
       <h1>ROBERT LAVILLA</h1>
     </div>
     <button id="menuToggle" class="menu-btn">☰</button>
@@ -56,14 +56,14 @@
         </p>
         <button id="projectsHomeButton">PROJECTS</button>
         <div class="linkContainer">
-          <div class="buttonCont">
+          <div class ="homeGithub buttonCont">
             <img
               src="./images/github.svg"
               alt="GitHub Icon"
               id="githubHomeButton"
             />
           </div>
-          <div class="buttonCont">
+          <div class = "homeLinkedIn buttonCont">
             <img
               src="./images/linkedin.svg"
               alt="LinkedIn Icon"
@@ -80,7 +80,7 @@
         <div class="cardContainer">
           <div class="imgCard"></div>
           <div class="imgCardTwo"></div>
-          <div class="imgCardThree"></div>
+          <div id="removeImg" class="imgCardThree"></div>
         </div>
       </div>
       <div class="aboutMainContainer">
@@ -209,42 +209,44 @@
       </div>
     </section>
     <section id="contact" class="contact">
-      <div class="contactLabelDiv">
-        <h1>CONTACT</h1>
-        <div class="line two"></div>
-      </div>
-      <div class="contactFlexDiv">
-        <div class="contactContainer">
-          <p>
-            If you are looking for a fearless problem-solver who loves tackling
-            challenges, reach out!
-          </p>
-          <div class="contactInfoDiv">
-            <img class="contactIcon" src="./images/location.svg" alt="" />
-            <p>Hazlet, New Jersey</p>
-          </div>
-          <div class="contactInfoDiv">
-            <img class="contactIcon" src="./images/cell.svg" alt="" />
-            <p>732-939-4803</p>
-          </div>
-          <div class="contactInfoDiv">
-            <img class="contactIcon" src="./images/email.svg" alt="" />
-            <p>robert.lavilla21@gmail.com</p>
-          </div>
-          <div class="contactLinkContainer">
-            <img
-              id="githubContactButton"
-              src="./images/github.svg"
-              alt="Robert LaVilla's Github Link"
-            />
-            <img
-              id="linkedInContactButton"
-              src="./images/linkedin.svg"
-              alt="Robert LaVilla's LinkedIn Link"
-            />
-          </div>
+      <div class="contactCenterDiv">
+        <div class="contactLabelDiv">
+          <h1>CONTACT</h1>
+          <div class="line two"></div>
         </div>
-        <div class="imgPlaceholder"></div>
+        <p class="contactHeading">
+          If you are looking for a fearless problem-solver who loves tackling
+          challenges, reach out!
+        </p>
+        <div class="contactFlexDiv">
+          <div class="contactContainer">
+            <div class="contactInfoDiv">
+              <img class="contactIcon" src="./images/location.svg" alt="" />
+              <p>Hazlet, New Jersey</p>
+            </div>
+            <div class="contactInfoDiv">
+              <img class="contactIcon" src="./images/cell.svg" alt="" />
+              <p>732-939-4803</p>
+            </div>
+            <div class="contactInfoDiv">
+              <img class="contactIcon" src="./images/email.svg" alt="" />
+              <p>robert.lavilla21@gmail.com</p>
+            </div>
+            <div class="contactLinkContainer">
+              <img
+                id="githubContactButton"
+                src="./images/github.svg"
+                alt="Robert LaVilla's Github Link"
+              />
+              <img
+                id="linkedInContactButton"
+                src="./images/linkedin.svg"
+                alt="Robert LaVilla's LinkedIn Link"
+              />
+            </div>
+          </div>
+          <img src="./images/selfie.jpg" id="contactImg" class="contactImg"></div>
+        </div>
       </div>
     </section>
   </body>

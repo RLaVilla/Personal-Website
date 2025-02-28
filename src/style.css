@@ -34,6 +34,7 @@ header {
 
 .homeCont img {
   width: 50px;
+  border-radius: 50%;
 }
 
 .homeCont {
@@ -129,7 +130,6 @@ header {
 }
 
 .linkContainer {
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.61);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +152,15 @@ header {
   cursor: pointer;
   padding: 10px;
   transition: background-color 0.5s ease;
-  border-radius: 10px;
+  background-color: #00000011;
+}
+
+.homeGithub {
+  border-top-right-radius: 10px;
+}
+
+.homeLinkedIn {
+  border-bottom-right-radius: 10px;
 }
 
 .linkContainer div:hover {
@@ -482,7 +490,15 @@ img.mity {
 
 .contact {
   background-color: rgba(72, 174, 192, 0.8);
-  padding: 50px 100px;
+  margin: auto;
+}
+
+.contactCenterDiv {
+  width: 80%;
+  padding: 20px 0;
+  display: grid;
+  place-items: center;
+  margin: auto;
 }
 
 .contactLabelDiv {
@@ -490,18 +506,21 @@ img.mity {
 }
 
 .contactContainer {
-  flex-basis: 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   font-family: kanit;
   letter-spacing: 1px;
   font-weight: 450;
+  justify-content: center;
 }
 
-.contactContainer p {
+.contactHeading {
   font-size: 19px;
   font-weight: 450;
+  font-family: kanit;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .contactInfoDiv {
@@ -519,11 +538,10 @@ img.mity {
   width: 28px;
 }
 
-.imgPlaceholder {
-  flex-basis: 50%;
-  border: 2px solid black;
-  width: 100%;
+.contactImg {
+  width: 274px;
   height: auto;
+  border-radius: 10px;
 }
 
 .contactLinkContainer {
@@ -538,8 +556,8 @@ img.mity {
 
 .contactFlexDiv {
   display: flex;
-  justify-content: space-between;
-  gap: 50px;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 @media (max-width: 1600px) {
@@ -635,7 +653,24 @@ img.mity {
   }
 
   .linkContainer {
-    display: none;
+    left: 50%;
+    top: 10vh;
+    align-items: flex-start;
+    flex-direction: row;
+    transform: translate(-50%);
+  }
+
+  .homeGithub {
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .contactHeading {
+    font-size: 16px;
+  }
+
+  .contactInfoDiv p {
+    font-size: 14px;
   }
 }
 
@@ -649,7 +684,7 @@ img.mity {
   }
 
   .overlay h1 {
-    font-size: 44px;
+    font-size: 42px;
   }
 
   header {
@@ -701,6 +736,22 @@ img.mity {
 
   .aboutMainContainer {
     padding-top: 0;
+  }
+
+  .contactImg {
+    width: 239px;
+  }
+
+  .contactCenterDiv {
+    width: 90%;
+  }
+
+  .linkContainer {
+    top: 8vh;
+  }
+
+  .linkContainer img {
+    width: 46px;
   }
 }
 
@@ -755,5 +806,123 @@ img.mity {
   #nav.active {
     opacity: 1;
     visibility: visible;
+  }
+
+  .contactImg {
+    width: 180px;
+  }
+
+  .contactCenterDiv {
+    width: 90%;
+  }
+
+  .contactFlexDiv {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutDiv button {
+    margin: 0 auto;
+  }
+
+  .aboutLabelDiv h1,
+  .projectLabelDiv h1,
+  .contactLabelDiv h1 {
+    font-size: 42px;
+  }
+
+  .line {
+    width: 50%;
+  }
+
+  .overlay h1 {
+    font-size: 30px;
+  }
+
+  .overlay p {
+    font-size: 17px;
+    width: 90%;
+  }
+
+  .overlayContainer button {
+    padding: 20px 60px;
+  }
+
+  .imgCard,
+  .imgCardTwo {
+    min-width: 200px;
+    border-radius: 8px;
+    min-height: 200px;
+  }
+
+  .imgCard {
+    top: 15%;
+    left: 5%;
+    transform: rotate(-12deg);
+  }
+
+  .imgCardTwo {
+    top: 52%;
+    left: 60%;
+    transform: rotate(7deg) translate(-50%, -50%);
+  }
+
+  .projectInfo h2 {
+    font-size: 20px;
+  }
+
+  .projectInfo p {
+    font-size: 18px;
+  }
+
+  .buttonContainer img,
+  .goButton {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about,
+  section.projects,
+  #contact {
+    padding: 20px;
+  }
+
+  .contactContainer {
+    flex-basis: 100%;
+  }
+
+  .contactHeading {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 400px) {
+  .overlay p {
+    font-size: 16px;
+  }
+  .overlay h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .imgCard,
+  .imgCardTwo {
+    min-width: 170px;
+    border-radius: 8px;
+    min-height: 170px;
+  }
+
+  .imgCard {
+    top: 15%;
+    left: 10%;
+    transform: rotate(-12deg);
+  }
+
+  .cardContainer {
+    width: 300px;
+    height: 250px;
   }
 }
