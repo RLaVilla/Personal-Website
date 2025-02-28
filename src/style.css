@@ -585,6 +585,12 @@ img.mity {
   }
 }
 
+@media (max-height: 599px) {
+  .linkContainer {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .aboutMainContainer {
     flex-direction: column;
@@ -1011,4 +1017,14 @@ img.mity {
 
 .goButton:active {
   background-color: black;
+}
+
+@media (max-height: 500px) {
+  .overlay h1 {
+    padding-top: 10vh;
+  }
+
+  .homeCont img {
+    width: 30px;
+  }
 }
