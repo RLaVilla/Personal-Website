@@ -92,16 +92,6 @@ header {
   letter-spacing: 2px;
 }
 
-.overlayContainer p {
-  font-size: 20px;
-  width: 50%;
-  font-weight: 300;
-  text-align: center;
-  line-height: 2;
-  letter-spacing: 1px;
-  padding: 50px;
-}
-
 .overlayContainer button {
   padding: 20px 80px;
   background-color: var(--green);
@@ -175,6 +165,15 @@ header {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+.aboutDiv p {
+  padding: 40px 0;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 2;
+}
+
 .aboutDiv {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
@@ -190,13 +189,24 @@ header {
   letter-spacing: 1.5px;
 }
 
-.aboutDiv p {
+.backgroundDiv {
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  width: 80%;
   padding: 40px 0;
+  border-radius: 20px;
+  margin: 10px 0 20px 0;
+}
+
+.backgroundDiv p {
   font-weight: 300;
   font-size: 18px;
   letter-spacing: 1px;
-  text-align: justify;
   line-height: 2;
+  width: 60%;
+  text-align: center;
 }
 
 .imgCard,
@@ -534,6 +544,10 @@ img.mity {
     height: 170px;
   }
 
+  .backgroundDiv p {
+    width: 80%;
+  }
+
   .about,
   section.projects {
     padding: 50px;
@@ -553,8 +567,8 @@ img.mity {
     font-size: 16px;
   }
 
-  .overlay p {
-    width: 80%;
+  .backgroundDiv p {
+    font-size: 16px;
   }
 
   .overlay h1 {
@@ -579,6 +593,14 @@ img.mity {
   .aboutDiv p {
     padding: 10px 0 20px 0;
     font-size: 16px;
+  }
+
+  .backgroundDiv p {
+    font-size: 16px;
+  }
+
+  .backgroundDiv {
+    padding: 20px 0;
   }
 
   .aboutMainContainer {
@@ -781,6 +803,11 @@ img.mity {
   .contactLabelDiv h1 {
     font-size: 50px;
   }
+
+  .backgroundDiv {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -802,8 +829,8 @@ img.mity {
     font-size: 30px;
   }
 
-  .overlay p {
-    font-size: 17px;
+  .backgroundDiv p {
+    font-size: 15px;
     width: 90%;
   }
 
