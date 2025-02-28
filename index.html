@@ -1,12 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="609a232ab53e413e38d2.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="609a232ab53e413e38d2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Parkinsans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Robert LaVilla</title>
-<script defer src="todo.js"></script></head>
-<body>
-    <div class="starfield" id="star"></div>
-</body>
+  <script defer src="todo.js"></script></head>
+  <header>
+    <div id="homeContainer" class="homeCont">
+      <img src="85aa8590d160f4bb2812.jpg" alt="Robert LaVilla Portrait" />
+      <h1>ROBERT LAVILLA</h1>
+    </div>
+    <button id="menuToggle" class="menu-btn">☰</button>
+    <nav id="nav">
+      <div class="itemCont home">
+        <div class="navItem" id="homeButton">HOME</div>
+      </div>
+      <div class="itemCont">
+        <div class="navItem" id="aboutButton">ABOUT</div>
+      </div>
+      <div class="itemCont">
+        <div class="navItem" id="projectsButton">PROJECTS</div>
+      </div>
+      <div class="itemCont">
+        <div class="navItem" id="contactButton">CONTACT</div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <div class="overlay">
+      <div class="overlayContainer">
+        <h1>Hey, I'm Robert LaVilla</h1>
+        <p>
+          A self-educated Web Developer with a passion for building complete web
+          applications and a determination to contribute to the ever-evolving
+          landscape of web development.
+        </p>
+        <button id="projectsHomeButton">PROJECTS</button>
+        <div class="linkContainer">
+          <div class="homeGithub buttonCont">
+            <img
+              src="c3cbc3f1704e3c6cf70f.svg"
+              alt="GitHub Icon"
+              id="githubHomeButton"
+            />
+          </div>
+          <div class="homeLinkedIn buttonCont">
+            <img
+              src="1556951fe78172c9ddd4.svg"
+              alt="LinkedIn Icon"
+              id="linkedInHomeButton"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="about" class="about">
+      <div class="aboutLabelDiv">
+        <h1>ABOUT ME</h1>
+        <div class="line"></div>
+        <div class="cardContainer">
+          <div class="imgCard"></div>
+          <div class="imgCardTwo"></div>
+          <div id="removeImg" class="imgCardThree"></div>
+        </div>
+      </div>
+      <div class="aboutMainContainer">
+        <div class="aboutDiv">
+          <h2>Get to know me!</h2>
+          <p>
+            I'm a <span>Frontend-Focused Web Developer,</span> building and
+            managing the Front-end of Websites and Web Applications. I taught
+            myself <span>Web Development</span> by following The Odin Project
+            curriculum - a thorough, learn-by-doing course. Throughout the
+            course and my own aspirations, I crafted my development knowledge by
+            building many projects, utilizing the skills displayed on this page.
+            Please see some of my work in the
+            <span id="projectSpan">Projects</span> section. <br /><br />
+            When I'm not at my desk, you can find me at the gym, watching a
+            Knicks game, or walking the beach shoreline with a fishing rod in my
+            hand.
+            <br /><br />
+            I'm seeking <span>opportunities</span> where I can apply my skills,
+            continue learning, and grow as a developer. If you have a role that
+            aligns with my experience, feel free to <span>reach out!</span>
+          </p>
+          <button id="aboutContactButton">CONTACT</button>
+        </div>
+        <div class="skillsDiv">
+          <h2>My skills</h2>
+          <div class="skillsContainer">
+            <div class="iconContainer">
+              <img src="0b3c3c6f46b52754a6f3.png" alt="HTML Icon" />
+              <h3>HTML5</h3>
+            </div>
+            <div class="iconContainer">
+              <img src="9c2b069ffe5b7c0adfee.png" alt="CSS Icon" />
+              <h3>CSS3</h3>
+            </div>
+            <div class="iconContainer">
+              <img src="55fe5addec87f0edcd97.png" alt="Javascript Icon" />
+              <h3>Javascript</h3>
+            </div>
+            <div class="iconContainer">
+              <img src="338ba3b31480a9ba4ad8.png" alt="React Icon" />
+              <h3>React</h3>
+            </div>
+            <div class="iconContainer">
+              <img src="d51b7c3d026e594278d2.png" alt="Node.js Icon" />
+              <h3>Node.js</h3>
+            </div>
+            <div class="iconContainer">
+              <img src="c3cbc3f1704e3c6cf70f.svg" alt="GitHub Icon" />
+              <h3>GitHub</h3>
+            </div>
+            <div class="iconContainer responsive">
+              <img src="360614d2e81601197bfd.svg" alt="Responsive Design Icon" />
+              <h3>Responsive Design</h3>
+            </div>
+            <div class="iconContainer">
+              <img
+                src="fc901af89ba6dbbec131.png"
+                alt="Command Line Interface Icon"
+              />
+              <h3>CLI</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <div class="projectLabelDiv">
+        <h1>PROJECTS</h1>
+        <div class="line"></div>
+      </div>
+
+      <div class="projectContainer">
+        <div class="project">
+          <div class="mockupContainer">
+            <img
+              class="mity"
+              src="957ad505f9d93fadacd8.png"
+              alt="Image of Mity Might Tournament Web App"
+            />
+          </div>
+          <div class="projectInfo">
+            <h2>Mity Might Tournament Web App</h2>
+            <p>
+              The Mity Might Tournament Web App was created for a fishing
+              tournament between all the participating employees at Fishermen's
+              Source. Its purpose was to log catches for each participant,
+              recording an image and a length for each submission. A leaderboard
+              was maintained to track and automate the tournament results.
+            </p>
+            <div class="buttonContainer">
+              <img
+                id="mityGithubButton"
+                src="c3cbc3f1704e3c6cf70f.svg"
+                alt="GitHub Link for Might Mite Tournament Web App"
+              />
+              <button id="mityGoButton" class="goButton">GO</button>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <div class="mockupContainer">
+            <img
+              src="b0b2b923a1a95e69a92b.png"
+              alt="Image of Battleship Game"
+            />
+          </div>
+          <div class="projectInfo">
+            <h2>Battleship Game</h2>
+            <p>
+              The Battleship Game was a project I created during The Odin
+              Project curriculum. I enjoyed the challenge of programming the
+              logic to make the game functional and tying it all together with a
+              simple user interface.
+            </p>
+            <div class="buttonContainer">
+              <img
+                id="battleshipGithubButton"
+                src="c3cbc3f1704e3c6cf70f.svg"
+                alt="GitHub Link for Battleship Game"
+              />
+              <button id="battleshipGoButton" class="goButton">GO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="contactCenterDiv">
+        <div class="contactLabelDiv">
+          <h1>CONTACT</h1>
+          <div class="line"></div>
+        </div>
+        <p class="contactHeading">
+          If you are looking for a fearless problem-solver who loves tackling
+          challenges, reach out!
+        </p>
+        <div class="contactFlexDiv">
+          <div class="contactContainer">
+            <div class="contactInfoDiv">
+              <img class="contactIcon" src="81f533b90beee3032d6c.svg" alt="" />
+              <p>Hazlet, New Jersey</p>
+            </div>
+            <div class="contactInfoDiv">
+              <img class="contactIcon" src="0c75fabcbb8f8f62d4b9.svg" alt="" />
+              <p>732-939-4803</p>
+            </div>
+            <div class="contactInfoDiv">
+              <img class="contactIcon" src="b3bbc89b007526c4d020.svg" alt="" />
+              <p>robert.lavilla21@gmail.com</p>
+            </div>
+            <div class="contactLinkContainer">
+              <img
+                id="githubContactButton"
+                src="2901e7ec99d74a800b89.svg"
+                alt="Robert LaVilla's Github Link"
+              />
+              <img
+                id="linkedInContactButton"
+                src="62a41e4fb21cd351694c.svg"
+                alt="Robert LaVilla's LinkedIn Link"
+              />
+            </div>
+          </div>
+          <img src="85aa8590d160f4bb2812.jpg" id="contactImg" class="contactImg" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
