@@ -306,7 +306,6 @@ span {
   font-size: 18px;
   font-weight: bold;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.445);
-  margin-bottom: 200px;
   color: white;
   cursor: pointer;
   transition: color 0.5s ease;
@@ -610,10 +609,6 @@ img.mity {
 @media (max-width: 900px) {
   .aboutMainContainer {
     flex-direction: column;
-  }
-
-  .aboutDiv button {
-    margin-bottom: 0;
   }
 
   .aboutDiv p {
