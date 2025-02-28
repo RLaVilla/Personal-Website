@@ -380,7 +380,7 @@ span {
 }
 
 .line {
-  width: 80%;
+  width: 250px;
   height: 1px;
   background-color: var(--green);
   margin: 0 auto;
@@ -834,7 +834,7 @@ img.mity {
   }
 
   .line {
-    width: 50%;
+    width: 150px;
   }
 
   .overlay h1 {
@@ -884,8 +884,7 @@ img.mity {
   }
 
   .about,
-  section.projects,
-  #contact {
+  section.projects {
     padding: 20px;
   }
 
@@ -904,6 +903,9 @@ img.mity {
   }
   .overlay h1 {
     font-size: 24px;
+  }
+  .overlayContainer button {
+    padding: 20px 40px;
   }
 }
 
